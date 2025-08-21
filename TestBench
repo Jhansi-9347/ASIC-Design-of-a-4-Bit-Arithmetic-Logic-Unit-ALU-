@@ -1,0 +1,55 @@
+TESTBENCH  -
+
+`timescale 1ns/1ps
+module tb_alu_4bit;
+    reg [3:0] A, B;
+    reg [2:0] sel;
+    wire [3:0] result;
+    wire carry;
+    alu_4bit dut (
+        .A(A),
+        .B(B),
+        .sel(sel),
+        .result(result),
+        .carry(carry)
+    );
+    initial begin
+        $dumpfile("alu_4bit.vcd");
+        $dumpvars(0, tb_alu_4bit);
+
+        // ADD
+        A = 4'd7; B = 4'd5; sel = 3'b000;
+        #10 $display("ADD: %d + %d = %d, Carry: %b", A, B, result, carry);
+
+        // SUB
+        A = 4'd9; B = 4'd3; sel = 3'b001;
+        #10 $display("SUB: %d - %d = %d, Borrow: %b", A, B, result, carry);
+
+        // AND
+        A = 4'b1100; B = 4'b1010; sel = 3'b010;
+        #10 $display("AND: %b & %b = %b", A, B, result);
+
+        // OR
+        sel = 3'b011;
+        #10 $display("OR: %b | %b = %b", A, B, result);
+
+        // XOR
+        sel = 3'b100;
+        #10 $display("XOR: %b ^ %b = %b", A, B, result);
+
+        // NOT
+        sel = 3'b101;
+        #10 $display("NOT: ~%b = %b", A, result);
+
+        // INC
+        A = 4'd15; sel = 3'b110;
+        #10 $display("INC: %d + 1 = %d, Carry: %b", A, result, carry);
+
+        // DEC
+        A = 4'd0; sel = 3'b111;
+        #10 $display("DEC: %d - 1 = %d, Borrow: %b", A, result, carry);
+
+        $finish;
+    end
+
+endmodule
