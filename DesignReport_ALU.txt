@@ -1,0 +1,95 @@
+****************************************
+Report : design
+Design : alu
+Version: T-2022.03-SP5
+Date   : Sun Aug  3 15:04:33 2025
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    saed32rvt_tt0p78vn40c (File: /home/student/Desktop/ece/example1/Testcase_C-DAC_july24/C-DAC_july24/ref/lib/stdcell_rvt/saed32rvt_tt0p78vn40c.db)
+
+Local Link Library:
+
+    {./../ref//lib/stdcell_rvt/saed32rvt_tt0p78vn40c.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : tt0p78vn40c
+    Library : saed32rvt_tt0p78vn40c
+    Process :   1.00
+    Temperature : -40.00
+    Voltage :   0.78
+    Interconnect Model : balanced_tree
+
+Wire Loading Model:
+
+    Selected manually by the user.
+
+Name           :   tc8000000
+Location       :   saed32rvt_tt0p78vn40c
+Resistance     :   0.01
+Capacitance    :   0.000143
+Area           :   0.02
+Slope          :   815.176
+Fanout   Length   Points Average Cap Std Deviation
+--------------------------------------------------------------
+     1    35.74
+     2    88.12
+     3   155.14
+     4   240.05
+     5   346.13
+     6   476.63
+     7   634.82
+     8   823.97
+     9  1047.34
+    10  1308.18
+    11  1609.78
+    12  1955.38
+    13  2348.25
+    14  2791.67
+    15  3288.88
+    16  3843.16
+    17  4457.77
+    18  5135.97
+    19  5881.02
+    20  6696.20
+
+
+
+Wire Loading Model Mode: enclosed.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    None Required
+
+Design Parameters:
+
+    None specified.
